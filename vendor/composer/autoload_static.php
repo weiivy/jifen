@@ -4,13 +4,13 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitca92174f94924455cc80624f2ab12859
+class ComposerStaticInit9c4ae0f1e3be1063039c0f96f3fd7424
 {
     public static $files = array (
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
         '2cffec82183ee1cea088009cef9a6fc3' => __DIR__ . '/..' . '/ezyang/htmlpurifier/library/HTMLPurifier.composer.php',
-        '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
         'a0edc8309cc5e1d60e3047b5df6b7052' => __DIR__ . '/..' . '/guzzlehttp/psr7/src/functions_include.php',
+        '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
         '2c102faa651ef8ea5874edb585946bce' => __DIR__ . '/..' . '/swiftmailer/swiftmailer/lib/swift_required.php',
         '180092cfc969a12e06f2132a203a3184' => __DIR__ . '/..' . '/codeception/verify/src/Codeception/function.php',
     );
@@ -62,6 +62,10 @@ class ComposerStaticInitca92174f94924455cc80624f2ab12859
         'F' => 
         array (
             'Faker\\' => 6,
+        ),
+        'E' => 
+        array (
+            'Egulias\\EmailValidator\\' => 23,
         ),
         'D' => 
         array (
@@ -171,6 +175,10 @@ class ComposerStaticInitca92174f94924455cc80624f2ab12859
         array (
             0 => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker',
         ),
+        'Egulias\\EmailValidator\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/egulias/email-validator/EmailValidator',
+        ),
         'Doctrine\\Instantiator\\' => 
         array (
             0 => __DIR__ . '/..' . '/doctrine/instantiator/src/Doctrine/Instantiator',
@@ -211,16 +219,13 @@ class ComposerStaticInitca92174f94924455cc80624f2ab12859
         ),
         'D' => 
         array (
+            'Doctrine\\Common\\Lexer\\' => 
+            array (
+                0 => __DIR__ . '/..' . '/doctrine/lexer/lib',
+            ),
             'Diff' => 
             array (
                 0 => __DIR__ . '/..' . '/phpspec/php-diff/lib',
-            ),
-        ),
-        'C' => 
-        array (
-            'Codeception\\' => 
-            array (
-                0 => __DIR__ . '/..' . '/codeception/specify/src',
             ),
         ),
         'B' => 
@@ -780,10 +785,10 @@ class ComposerStaticInitca92174f94924455cc80624f2ab12859
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInitca92174f94924455cc80624f2ab12859::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInitca92174f94924455cc80624f2ab12859::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInitca92174f94924455cc80624f2ab12859::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInitca92174f94924455cc80624f2ab12859::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit9c4ae0f1e3be1063039c0f96f3fd7424::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit9c4ae0f1e3be1063039c0f96f3fd7424::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit9c4ae0f1e3be1063039c0f96f3fd7424::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInit9c4ae0f1e3be1063039c0f96f3fd7424::$classMap;
 
         }, null, ClassLoader::class);
     }
